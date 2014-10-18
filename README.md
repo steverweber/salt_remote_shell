@@ -3,13 +3,21 @@ salt_remote_shell
 
 salt remote shell tty hacking
 
+this is crap and unsafe! dont use in production!
+
+Next steps
+ - use salt as the communication transport vs directly using socket.
+ - creating salt-tty to automate accessing the shell
+ - support terminal things like changing screensize, keyboard cmds like ctrl+c
+
+
 
 master or frontend runs
 ----------------------------
 ```
 nc -l 4444
 ```
-or wip
+or use python as the shell...but my code blocks and dont work :(
 
 ```
 cat > srv.py <<EOF
