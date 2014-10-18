@@ -11,6 +11,9 @@ Next steps
  - support terminal things like changing screensize, keyboard cmds like ctrl+c
 
 
+perhaps helpfull to review:
+ - https://github.com/saltstack/salt/blob/develop/salt/utils/vt.py
+ 
 
 master or frontend runs
 ----------------------------
