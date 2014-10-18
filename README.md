@@ -7,7 +7,7 @@ this is crap and unsafe! dont use in production!
 
 Next steps
  - use salt as the communication transport vs directly using socket.
-   - perhaps can have salt create a socket file like /var/salt/minion_streams/minionid_pid.socket
+   - perhaps salt creates a /var/salt/minion_streams/minionid_cmdpid.socket
  - creating salt-tty to automate standing and connecting to remote program stream
  - support terminal things like changing screensize, keyboard cmds like ctrl+c
 
