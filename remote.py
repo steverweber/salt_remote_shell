@@ -25,7 +25,6 @@ def shell_unsafe(cmd='/bin/bash -i', remote_system=None, remote_port=4444):
         cmd='/bin/sh -i'
         cmd='cmd.exe'
     '''
-    #salt.utils.daemonize()
     if not remote_system:
         remote_system = __opts__['master']
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
