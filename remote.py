@@ -41,7 +41,7 @@ def shell_unsafe(cmd='/bin/bash -i', remote_system=None, remote_port=4444):
     if not remote_system:
         remote_system = __opts__['master']
     queue = multiprocessing.Queue()
-    ps = multiprocessing.Process(target=_run_proccess, args=(queue, cmd, remote_system, remote_port, ))
+    ps = multiprocessing.Process(target=_run_proccess, args=(queue, cmd, remote_system, remote_port))
     ps.daemon = True
     ps.start()
     pid = ps.pid
