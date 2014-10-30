@@ -9,6 +9,7 @@ salt remote shell tty hacking
 this is crap and unsafe! dont use in production!
 
 Next steps
+ - https://github.com/steverweber/salt_remote_shell/issues/1
  - use salt as the communication transport vs directly using socket.
    - perhaps salt creates a /var/salt/minion_streams/minionid_cmdpid.socket
  - creating salt-tty to automate standing and connecting to remote program stream
