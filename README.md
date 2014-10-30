@@ -1,6 +1,9 @@
 salt_remote_shell
 =================
 
+My development has halted, no time :(
+
+
 salt remote shell tty hacking
 
 this is crap and unsafe! dont use in production!
